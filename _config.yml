@@ -80,3 +80,4 @@ deploy:
   type: git
   repo:
        github: git@github.com:yaotfei/yaotfei.github.io.git,master
+       coding: https://git.coding.net/yaotfei/yaotfei.git,master
