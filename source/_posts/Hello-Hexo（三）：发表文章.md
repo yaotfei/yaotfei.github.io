@@ -7,7 +7,7 @@ tags:
       - hexo
 description: 博客框架已经搭建好了，配置文件也配置了，接下来就是写自己的博客了，本文介绍如何写自己的播客以及所用的语法。
 ---
-# 前言 #
+# 概述 #
 ---
 博客框架已经搭建好了，配置文件也配置了，接下来就是写自己的博客了，本文介绍如何写自己的播客以及所用的语法。
 <!--more-->
@@ -71,7 +71,7 @@ hexo3.x还提供了另一种解决方案：
 安装 post_asset_folder
 
 	npm install https://github.com/CodeFalling/hexo-asset-image
-把博客根目录中的post_asset_folder设置为true,
+把博客根目录中配置文件的属性post_asset_folder设置为true,
 这样在你每次新建一篇文章时，在source/_posts目录中都会增加一个同名的文件夹，利用一下语法来引用图片：
 
 	{% asset_link slug [title] %}

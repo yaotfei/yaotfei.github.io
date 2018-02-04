@@ -7,7 +7,7 @@ tags:
       - hexo
 description: 现在我们是把hexo部署到了github上，但是github是国外的网站，每次打开都非常慢，然后看到网上建议可以部署到国内的托管平台，就查询了资料并把代码部署到coding上。
 ---
-# 前言 #
+# 概述 #
 ---
 coding是和github一样的国内的代码托管平台，部署方式和github类似。
 # 正文 #

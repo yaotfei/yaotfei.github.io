@@ -5,7 +5,7 @@ categories: Spring学习笔记
 tags: Spring
 description: 在工作中一直用Spring相关框架，但都是用到什么学什么，没有一个完整的知识框架，所以导致对Spring的认知也不完整，所以，特地买了相关资料从新认识Spring。
 ---
-# 前言 #
+# 概述 #
 ---
 Spring是一个开源框架，，Spring可以做非常多的事情，但归根到底支撑Spring的仅仅是少许的基本理念，所有的理念都可以追溯到Spring最根本的使命上：简化java开发。
 Spring是如何简化java开发的？为了降低java开发的复杂性，Spring采取了一下4中关键策略：

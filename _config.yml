@@ -6,8 +6,8 @@
 title: 菜鸟笔记
 subtitle:
 description:
-author: rick
-language: zh-Hans
+author: yaotfei
+language: zh-CN
 timezone:
 
 # URL
@@ -34,7 +34,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: nextUpdate
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

@@ -5,7 +5,7 @@ categories: Spring学习笔记
 tags: Spring装配Bean
 description: 上篇简单介绍了Spring的一些常用基础功能，通过XML把一个Bean注入到另一个Bean中，但是Spring还有其他更好的方式完成这项枯燥的工作，本篇将介绍Spring装配Bean的几种方法。
 ---
-# 前言 #
+# 概述 #
 ---
 在Spring中，对象无需自己查找或创建与其所关联的其他对象，相反，容器负责把需要相互协作的对象引用赋予各个对象。创建应用对象之间的协作关系的行为通常称为装配，这也是依赖注入的本质，本篇将介绍使用Spring装配bean的基础知识。
 

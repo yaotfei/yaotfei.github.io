@@ -7,7 +7,7 @@ tags:
       - hexo
 description: 上一篇介绍如何用github+hexo搭建自己的播客，hexo默认的主题是landsacpe，如果不喜欢也可以从github上面选择自己喜欢的主题。本篇介绍一下我自己用的主题配置
 ---
-# 前言 #
+# 概述 #
 ---
 上一篇介绍如何用hexo+hexo搭建自己的播客，hexo默认的主题是landsacpe，如果不喜欢也可以从github上面选择自己喜欢的主题。本篇介绍一下我自己用的主题配置
 # 正文 #
