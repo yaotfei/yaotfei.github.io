@@ -5,12 +5,15 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +41,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,47 +49,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.0.3" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.3">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.3">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.3">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Spring装配Bean," />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.3" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="上篇简单介绍了Spring的一些常用基础功能，通过XML把一个Bean注入到另一个Bean中，但是Spring还有其他更好的方式完成这项枯燥的工作，本篇将介绍Spring装配Bean的几种方法。">
-<meta name="keywords" content="Spring装配Bean">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Spring学习笔记（二）：装配Bean">
-<meta property="og:url" content="http://yoursite.com/2017/07/17/Spring学习笔记（二）：装配Bean/index.html">
-<meta property="og:site_name" content="菜鸟笔记">
-<meta property="og:description" content="上篇简单介绍了Spring的一些常用基础功能，通过XML把一个Bean注入到另一个Bean中，但是Spring还有其他更好的方式完成这项枯燥的工作，本篇将介绍Spring装配Bean的几种方法。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-03T01:41:50.086Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring学习笔记（二）：装配Bean">
-<meta name="twitter:description" content="上篇简单介绍了Spring的一些常用基础功能，通过XML把一个Bean注入到另一个Bean中，但是Spring还有其他更好的方式完成这项枯燥的工作，本篇将介绍Spring装配Bean的几种方法。">
 
 
 
@@ -99,15 +76,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '5.1.4',
+    version: '6.0.3',
     sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -119,13 +94,44 @@
 </script>
 
 
+  
+
+
+
+
+  
+  <meta name="keywords" content="Spring装配Bean," />
+
+
+<meta name="description" content="上篇简单介绍了Spring的一些常用基础功能，通过XML把一个Bean注入到另一个Bean中，但是Spring还有其他更好的方式完成这项枯燥的工作，本篇将介绍Spring装配Bean的几种方法。">
+<meta name="keywords" content="Spring装配Bean">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring学习笔记（二）：装配Bean">
+<meta property="og:url" content="http://yoursite.com/2017/07/17/Spring学习笔记（二）：装配Bean/index.html">
+<meta property="og:site_name" content="菜鸟笔记">
+<meta property="og:description" content="上篇简单介绍了Spring的一些常用基础功能，通过XML把一个Bean注入到另一个Bean中，但是Spring还有其他更好的方式完成这项枯燥的工作，本篇将介绍Spring装配Bean的几种方法。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2017/07/17/Spring学习笔记（二）：装配Bean/pic_01.png">
+<meta property="og:updated_time" content="2018-02-05T01:36:28.262Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spring学习笔记（二）：装配Bean">
+<meta name="twitter:description" content="上篇简单介绍了Spring的一些常用基础功能，通过XML把一个Bean注入到另一个Bean中，但是Spring还有其他更好的方式完成这项枯燥的工作，本篇将介绍Spring装配Bean的几种方法。">
+<meta name="twitter:image" content="http://yoursite.com/2017/07/17/Spring学习笔记（二）：装配Bean/pic_01.png">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/2017/07/17/Spring学习笔记（二）：装配Bean/"/>
 
 
 
-
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
   <title>Spring学习笔记（二）：装配Bean | 菜鸟笔记</title>
   
 
@@ -136,9 +142,37 @@
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -149,7 +183,7 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"> <div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
@@ -183,51 +217,25 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
         </li>
       
         
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
         </li>
       
 
@@ -237,10 +245,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
@@ -273,9 +278,15 @@
 </nav>
 
 
+  
+
+
 
  </div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
@@ -292,6 +303,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -300,7 +313,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/17/Spring学习笔记（二）：装配Bean/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
+      <meta itemprop="name" content="yaotfei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -326,11 +339,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-17T11:32:26+08:00">
-                2017-07-17
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-17T11:32:26+08:00">2017-07-17</time>
             
 
+            
             
 
             
@@ -348,11 +360,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Spring学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">Spring学习笔记</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Spring学习笔记/" itemprop="url" rel="index"><span itemprop="name">Spring学习笔记</span></a></span>
 
                 
                 
@@ -372,9 +380,7 @@
           
 
           
-              <div class="post-description">
-                  上篇简单介绍了Spring的一些常用基础功能，通过XML把一个Bean注入到另一个Bean中，但是Spring还有其他更好的方式完成这项枯燥的工作，本篇将介绍Spring装配Bean的几种方法。
-              </div>
+              <div class="post-description">上篇简单介绍了Spring的一些常用基础功能，通过XML把一个Bean注入到另一个Bean中，但是Spring还有其他更好的方式完成这项枯燥的工作，本篇将介绍Spring装配Bean的几种方法。</div>
           
 
         </div>
@@ -390,7 +396,7 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><hr>
 <p>在Spring中，对象无需自己查找或创建与其所关联的其他对象，相反，容器负责把需要相互协作的对象引用赋予各个对象。创建应用对象之间的协作关系的行为通常称为装配，这也是依赖注入的本质，本篇将介绍使用Spring装配bean的基础知识。</p>
 <h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><hr>
 <p>在Spring中装配bean有多种方式：</p>
@@ -567,7 +573,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
 </code></pre><p>在c-命名空间和模式声明之后，我们就可以使用它来声明构造器参数了：</p>
 <pre><code>&lt;bean id=&quot;cdPlayer&quot; class=&quot;soundsystem.CDPlayer&quot; c:cd-ref=&quot;compactDisc&quot; /&gt;
 </code></pre><p>这里我们使用了c-命名空间来声明构造器参数。</p>
-
+<img src="/2017/07/17/Spring学习笔记（二）：装配Bean/pic_01.png" title="pic_01.png">
 <p>属性名以“c:”开头，也就是命名空间的前缀。接下来就是要装配的构造器参数名，在此之后是“-ref”，这是一个命名的约定，它会告诉Spring，正在装配的是一个bean的引用，这个bean的名字是compactDisc，而不是字面量“compactDisc”。<br>在上面的代码中我们使用了构造器参数的名称，还有一个可替代的方案：</p>
 <pre><code>&lt;bean id=&quot;cdPlayer&quot; class=&quot;soundsystem.CDPlayer&quot; c:_0-ref=&quot;compactDisc&quot; /&gt;
 </code></pre><p>这里的配置是吧参数的名字替换成了“0”，也就是参数的索引，因为XML中不允许数字作为属性的第一个字符，因此必须要添加一个下划线作为前缀。<br>当构造器有多个参数的时候这种方式更为简便，如果只有一个构造器参数，我们还有另外一种方案：</p>
@@ -720,35 +726,6 @@ public class SoundSystemConfig{···}
     
 
     
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="rick 微信支付"/>
-        <p>微信支付</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="rick 支付宝"/>
-        <p>支付宝</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
-    
 
     
 
@@ -807,9 +784,6 @@ public class SoundSystemConfig{···}
           </div>
           
 
-
-          
-
   
     <div class="comments" id="comments">
       <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA2OC85NjMw"></div>
@@ -852,58 +826,83 @@ public class SoundSystemConfig{···}
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">rick</p>
+              <p class="site-author-name" itemprop="name">yaotfei</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">11</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:yaotfei@aliyun.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yaotfei@aliyun.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
             </div>
           
 
@@ -923,10 +922,17 @@ public class SoundSystemConfig{···}
                     <a href="http://theme-next.iissnan.com/" title="NexT" target="_blank">NexT</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhangxinxu.com/" title="鑫空间，鑫生活" target="_blank">鑫空间，鑫生活</a>
+                  </li>
+                
               </ul>
             </div>
           
 
+          
+            
+          
           
 
         </div>
@@ -942,7 +948,7 @@ public class SoundSystemConfig{···}
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring配置的可选方案"><span class="nav-number">2.1.</span> <span class="nav-text">Spring配置的可选方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动化装配bean"><span class="nav-number">2.2.</span> <span class="nav-text">自动化装配bean</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建可被发现的bean"><span class="nav-number">2.2.1.</span> <span class="nav-text">创建可被发现的bean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为组件扫描的bean命名"><span class="nav-number">2.2.2.</span> <span class="nav-text">为组件扫描的bean命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置组件扫描的基础包"><span class="nav-number">2.2.3.</span> <span class="nav-text">设置组件扫描的基础包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过为bean添加注释实现自动装配"><span class="nav-number">2.2.4.</span> <span class="nav-text">通过为bean添加注释实现自动装配</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过java代码装配bean"><span class="nav-number">2.3.</span> <span class="nav-text">通过java代码装配bean</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建配置类"><span class="nav-number">2.3.1.</span> <span class="nav-text">创建配置类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明简单的bean"><span class="nav-number">2.3.2.</span> <span class="nav-text">声明简单的bean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#借助javaConfig实现注入"><span class="nav-number">2.3.3.</span> <span class="nav-text">借助javaConfig实现注入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过XML装配bean"><span class="nav-number">2.4.</span> <span class="nav-text">通过XML装配bean</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建XML配置规范"><span class="nav-number">2.4.1.</span> <span class="nav-text">创建XML配置规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明一个简单的bean"><span class="nav-number">2.4.2.</span> <span class="nav-text">声明一个简单的bean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#借助构造器注入初始化bean"><span class="nav-number">2.4.3.</span> <span class="nav-text">借助构造器注入初始化bean</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#构造器注入bean引用"><span class="nav-number">2.4.3.1.</span> <span class="nav-text">构造器注入bean引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将字面量注入到构造器中"><span class="nav-number">2.4.3.2.</span> <span class="nav-text">将字面量注入到构造器中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#装配集合"><span class="nav-number">2.4.3.3.</span> <span class="nav-text">装配集合</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导入和混合配置"><span class="nav-number">2.5.</span> <span class="nav-text">导入和混合配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在javaConfig中引用XML配置"><span class="nav-number">2.5.1.</span> <span class="nav-text">在javaConfig中引用XML配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在XML配置中引入javaConfig"><span class="nav-number">2.5.2.</span> <span class="nav-text">在XML配置中引入javaConfig</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring配置的可选方案"><span class="nav-number">2.1.</span> <span class="nav-text">Spring配置的可选方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动化装配bean"><span class="nav-number">2.2.</span> <span class="nav-text">自动化装配bean</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建可被发现的bean"><span class="nav-number">2.2.1.</span> <span class="nav-text">创建可被发现的bean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为组件扫描的bean命名"><span class="nav-number">2.2.2.</span> <span class="nav-text">为组件扫描的bean命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置组件扫描的基础包"><span class="nav-number">2.2.3.</span> <span class="nav-text">设置组件扫描的基础包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过为bean添加注释实现自动装配"><span class="nav-number">2.2.4.</span> <span class="nav-text">通过为bean添加注释实现自动装配</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过java代码装配bean"><span class="nav-number">2.3.</span> <span class="nav-text">通过java代码装配bean</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建配置类"><span class="nav-number">2.3.1.</span> <span class="nav-text">创建配置类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明简单的bean"><span class="nav-number">2.3.2.</span> <span class="nav-text">声明简单的bean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#借助javaConfig实现注入"><span class="nav-number">2.3.3.</span> <span class="nav-text">借助javaConfig实现注入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过XML装配bean"><span class="nav-number">2.4.</span> <span class="nav-text">通过XML装配bean</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建XML配置规范"><span class="nav-number">2.4.1.</span> <span class="nav-text">创建XML配置规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明一个简单的bean"><span class="nav-number">2.4.2.</span> <span class="nav-text">声明一个简单的bean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#借助构造器注入初始化bean"><span class="nav-number">2.4.3.</span> <span class="nav-text">借助构造器注入初始化bean</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#构造器注入bean引用"><span class="nav-number">2.4.3.1.</span> <span class="nav-text">构造器注入bean引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将字面量注入到构造器中"><span class="nav-number">2.4.3.2.</span> <span class="nav-text">将字面量注入到构造器中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#装配集合"><span class="nav-number">2.4.3.3.</span> <span class="nav-text">装配集合</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导入和混合配置"><span class="nav-number">2.5.</span> <span class="nav-text">导入和混合配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在javaConfig中引用XML配置"><span class="nav-number">2.5.1.</span> <span class="nav-text">在javaConfig中引用XML配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在XML配置中引入javaConfig"><span class="nav-number">2.5.2.</span> <span class="nav-text">在XML配置中引入javaConfig</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -969,7 +975,11 @@ public class SoundSystemConfig{···}
   <span class="author" itemprop="copyrightHolder">Hosted by <a href="https://coding.net/pages" target="_Blank">Coding Pages</a></span>
 
   
+
+  
 </div>
+
+
 
 
 
@@ -983,15 +993,6 @@ public class SoundSystemConfig{···}
 
 
 
-
-  <script type="text/javascript">
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//tajs.qq.com/stats?sId=64957709";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -1027,7 +1028,11 @@ public class SoundSystemConfig{···}
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1047,16 +1052,6 @@ public class SoundSystemConfig{···}
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1065,18 +1060,13 @@ public class SoundSystemConfig{···}
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.3"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.3"></script>
 
 
 
@@ -1084,30 +1074,26 @@ public class SoundSystemConfig{···}
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.3"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.3"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.3"></script>
 
 
 
   
 
 
-  
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.3"></script>
 
+
+
+  
 
 
 
@@ -1135,8 +1121,6 @@ public class SoundSystemConfig{···}
       })(document, 'script');
     </script>
   
-
-
 
 
 
@@ -1198,6 +1182,21 @@ public class SoundSystemConfig{···}
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -1231,6 +1230,9 @@ public class SoundSystemConfig{···}
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1477,11 +1479,13 @@ public class SoundSystemConfig{···}
   
 
   
-  
 
   
   
 
+  
+
+  
 
   
 

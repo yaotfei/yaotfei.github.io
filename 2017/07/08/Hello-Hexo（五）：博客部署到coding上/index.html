@@ -5,12 +5,15 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +41,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,47 +49,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.0.3" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.3">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.3">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.3">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hello Hexo,hexo," />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.3" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="现在我们是把hexo部署到了github上，但是github是国外的网站，每次打开都非常慢，然后看到网上建议可以部署到国内的托管平台，就查询了资料并把代码部署到coding上。">
-<meta name="keywords" content="Hello Hexo,hexo">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hello Hexo（五）：博客部署到coding上">
-<meta property="og:url" content="http://yoursite.com/2017/07/08/Hello-Hexo（五）：博客部署到coding上/index.html">
-<meta property="og:site_name" content="菜鸟笔记">
-<meta property="og:description" content="现在我们是把hexo部署到了github上，但是github是国外的网站，每次打开都非常慢，然后看到网上建议可以部署到国内的托管平台，就查询了资料并把代码部署到coding上。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-03T01:41:50.043Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello Hexo（五）：博客部署到coding上">
-<meta name="twitter:description" content="现在我们是把hexo部署到了github上，但是github是国外的网站，每次打开都非常慢，然后看到网上建议可以部署到国内的托管平台，就查询了资料并把代码部署到coding上。">
 
 
 
@@ -99,15 +76,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '5.1.4',
+    version: '6.0.3',
     sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -119,13 +94,50 @@
 </script>
 
 
+  
+
+
+
+
+  
+  <meta name="keywords" content="Hello Hexo,hexo," />
+
+
+<meta name="description" content="现在我们是把hexo部署到了github上，但是github是国外的网站，每次打开都非常慢，然后看到网上建议可以部署到国内的托管平台，就查询了资料并把代码部署到coding上。">
+<meta name="keywords" content="Hello Hexo,hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello Hexo（五）：博客部署到coding上">
+<meta property="og:url" content="http://yoursite.com/2017/07/08/Hello-Hexo（五）：博客部署到coding上/index.html">
+<meta property="og:site_name" content="菜鸟笔记">
+<meta property="og:description" content="现在我们是把hexo部署到了github上，但是github是国外的网站，每次打开都非常慢，然后看到网上建议可以部署到国内的托管平台，就查询了资料并把代码部署到coding上。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_01.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_02.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_03.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_04.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_05.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_06.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_07.png">
+<meta property="og:updated_time" content="2018-02-05T01:36:28.253Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hello Hexo（五）：博客部署到coding上">
+<meta name="twitter:description" content="现在我们是把hexo部署到了github上，但是github是国外的网站，每次打开都非常慢，然后看到网上建议可以部署到国内的托管平台，就查询了资料并把代码部署到coding上。">
+<meta name="twitter:image" content="http://yoursite.com/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_01.png">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/2017/07/08/Hello-Hexo（五）：博客部署到coding上/"/>
 
 
 
-
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
   <title>Hello Hexo（五）：博客部署到coding上 | 菜鸟笔记</title>
   
 
@@ -136,9 +148,37 @@
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -149,7 +189,7 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"> <div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
@@ -183,51 +223,25 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
         </li>
       
         
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
         </li>
       
 
@@ -237,10 +251,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
@@ -273,9 +284,15 @@
 </nav>
 
 
+  
+
+
 
  </div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
@@ -292,6 +309,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -300,7 +319,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/08/Hello-Hexo（五）：博客部署到coding上/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
+      <meta itemprop="name" content="yaotfei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -326,11 +345,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-08T09:36:28+08:00">
-                2017-07-08
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-08T09:36:28+08:00">2017-07-08</time>
             
 
+            
             
 
             
@@ -348,11 +366,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo教程/" itemprop="url" rel="index"><span itemprop="name">Hexo教程</span></a></span>
 
                 
                 
@@ -372,9 +386,7 @@
           
 
           
-              <div class="post-description">
-                  现在我们是把hexo部署到了github上，但是github是国外的网站，每次打开都非常慢，然后看到网上建议可以部署到国内的托管平台，就查询了资料并把代码部署到coding上。
-              </div>
+              <div class="post-description">现在我们是把hexo部署到了github上，但是github是国外的网站，每次打开都非常慢，然后看到网上建议可以部署到国内的托管平台，就查询了资料并把代码部署到coding上。</div>
           
 
         </div>
@@ -390,10 +402,10 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><hr>
 <p>coding是和github一样的国内的代码托管平台，部署方式和github类似。</p>
 <h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><hr>
-<h2 id="coding创建新项目"><a href="#coding创建新项目" class="headerlink" title="coding创建新项目"></a>coding创建新项目</h2><p>想要把代码部署到coding上当然是要在<a href="https://coding.net" target="_blank" rel="noopener">coding官网</a>注册账号。<br>注册完后同样需要创建项目，相当于github的仓库：<br>    <br>项目建好后复制项目的ssh地址，或者https地址<br>    <br>然后在博客的_config.yml最下面配置：</p>
+<h2 id="coding创建新项目"><a href="#coding创建新项目" class="headerlink" title="coding创建新项目"></a>coding创建新项目</h2><p>想要把代码部署到coding上当然是要在<a href="https://coding.net" target="_blank" rel="noopener">coding官网</a>注册账号。<br>注册完后同样需要创建项目，相当于github的仓库：<br>    <img src="/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_01.png" title="pic_01.png"><br>项目建好后复制项目的ssh地址，或者https地址<br>    <img src="/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_02.png" title="pic_02.png"><br>然后在博客的_config.yml最下面配置：</p>
 <pre><code>deploy:
 type: git
 repo: 
@@ -402,9 +414,9 @@ repo:
 </code></pre><blockquote>
 <p>tip：_config.yml文件是YAML标记语言，YAML依靠缩进来确定元素间的从属关系。因此，请确保每个deployer的缩进长度相同，并且使用空格缩进。</p>
 </blockquote>
-<p>把之前本地生成的.ssh公钥（id_rsa.pub文件中）配置到coding中<br>    <br>添加完后，准备工作就完成了，<br>在git bash输入命令：</p>
+<p>把之前本地生成的.ssh公钥（id_rsa.pub文件中）配置到coding中<br>    <img src="/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_03.png" title="pic_03.png"><br>添加完后，准备工作就完成了，<br>在git bash输入命令：</p>
 <pre><code>ssh -T git@git.coding.net
-</code></pre><p>遇到提示输入yes：<br>    <br>出现如上结果说明公钥添加成功。<br>最后把博客同步到coding中：</p>
+</code></pre><p>遇到提示输入yes：<br>    <img src="/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_04.png" title="pic_04.png"><br>出现如上结果说明公钥添加成功。<br>最后把博客同步到coding中：</p>
 <pre><code>hexo deploy -g
 </code></pre><p>同步后怎么才能像github那样访问自己的博客呢。<br>coding访问自己项目的方式是</p>
 <pre><code>http://登陆名.coding.me/项目名
@@ -412,8 +424,8 @@ repo:
 <pre><code>http://rick0407.coding.me/rick0407
 </code></pre><p>如果你的项目名和登录名是一样的就可以省略项目名，直接输入 </p>
 <pre><code>http://rick0407.coding.me
-</code></pre><p>也可以访问，所以建议项目名和登录名相同。<br>同步到coding后还不能直接访问，需要在Pages服务里面保存部署来源：<br>    <br>这样就可以直接访问你的博客了。</p>
-<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>把你的github地址和coding地址绑定到同一个域名下，实现国内的访问coding，国外访问github。<br>在<a href="https://wanwang.aliyun.com" target="_blank" rel="noopener">阿里云</a>购买域名，（当然也可以在其他域名提供商购买），我们自己用就没必要购买.com的国际域名和白金词，最便宜的3元/年。购买后需要实名制和简单的配置。<br>通过审核后就可以配置域名了，在博客根目录的source目录下创建CNAME文件（文件名称必须一样），没有后缀。文件的内容是你自己的域名，不带www,如yaotfly.com。添加后部署到github上和coding上面。<br>部署到上面后，需要在coding网站上绑定自己的域名<br>    <br>绑定后，在域名控制台对自己的域名添加解析：<br>    <br>然后就可以访问自己的域名了，当你访问原部署的地址时，会自动跳到自己的域名下。</p>
+</code></pre><p>也可以访问，所以建议项目名和登录名相同。<br>同步到coding后还不能直接访问，需要在Pages服务里面保存部署来源：<br>    <img src="/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_05.png" title="pic_05.png"><br>这样就可以直接访问你的博客了。</p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>把你的github地址和coding地址绑定到同一个域名下，实现国内的访问coding，国外访问github。<br>在<a href="https://wanwang.aliyun.com" target="_blank" rel="noopener">阿里云</a>购买域名，（当然也可以在其他域名提供商购买），我们自己用就没必要购买.com的国际域名和白金词，最便宜的3元/年。购买后需要实名制和简单的配置。<br>通过审核后就可以配置域名了，在博客根目录的source目录下创建CNAME文件（文件名称必须一样），没有后缀。文件的内容是你自己的域名，不带www,如yaotfly.com。添加后部署到github上和coding上面。<br>部署到上面后，需要在coding网站上绑定自己的域名<br>    <img src="/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_06.png" title="pic_06.png"><br>绑定后，在域名控制台对自己的域名添加解析：<br>    <img src="/2017/07/08/Hello-Hexo（五）：博客部署到coding上/pic_07.png" title="pic_07.png"><br>然后就可以访问自己的域名了，当你访问原部署的地址时，会自动跳到自己的域名下。</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><hr>
 <p>到此，我们终于实现了部署一次github和coding同步部署了，访问速度也比之前快了很多，后面将为我们的博客添加站内搜索，让百度能狗收录我的博客</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><hr>
@@ -427,35 +439,6 @@ repo:
 
     
 
-    
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="rick 微信支付"/>
-        <p>微信支付</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="rick 支付宝"/>
-        <p>支付宝</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
     
 
     
@@ -517,9 +500,6 @@ repo:
           </div>
           
 
-
-          
-
   
     <div class="comments" id="comments">
       <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA2OC85NjMw"></div>
@@ -562,58 +542,83 @@ repo:
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">rick</p>
+              <p class="site-author-name" itemprop="name">yaotfei</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">11</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:yaotfei@aliyun.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yaotfei@aliyun.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
             </div>
           
 
@@ -633,10 +638,17 @@ repo:
                     <a href="http://theme-next.iissnan.com/" title="NexT" target="_blank">NexT</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhangxinxu.com/" title="鑫空间，鑫生活" target="_blank">鑫空间，鑫生活</a>
+                  </li>
+                
               </ul>
             </div>
           
 
+          
+            
+          
           
 
         </div>
@@ -652,7 +664,7 @@ repo:
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#coding创建新项目"><span class="nav-number">2.1.</span> <span class="nav-text">coding创建新项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定域名"><span class="nav-number">2.2.</span> <span class="nav-text">绑定域名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#coding创建新项目"><span class="nav-number">2.1.</span> <span class="nav-text">coding创建新项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定域名"><span class="nav-number">2.2.</span> <span class="nav-text">绑定域名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -679,7 +691,11 @@ repo:
   <span class="author" itemprop="copyrightHolder">Hosted by <a href="https://coding.net/pages" target="_Blank">Coding Pages</a></span>
 
   
+
+  
 </div>
+
+
 
 
 
@@ -693,15 +709,6 @@ repo:
 
 
 
-
-  <script type="text/javascript">
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//tajs.qq.com/stats?sId=64957709";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -737,7 +744,11 @@ repo:
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -757,16 +768,6 @@ repo:
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -775,18 +776,13 @@ repo:
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.3"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.3"></script>
 
 
 
@@ -794,30 +790,26 @@ repo:
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.3"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.3"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.3"></script>
 
 
 
   
 
 
-  
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.3"></script>
 
+
+
+  
 
 
 
@@ -845,8 +837,6 @@ repo:
       })(document, 'script');
     </script>
   
-
-
 
 
 
@@ -908,6 +898,21 @@ repo:
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -941,6 +946,9 @@ repo:
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1187,11 +1195,13 @@ repo:
   
 
   
-  
 
   
   
 
+  
+
+  
 
   
 

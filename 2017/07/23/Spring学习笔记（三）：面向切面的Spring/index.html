@@ -5,12 +5,15 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +41,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,47 +49,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.0.3" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.3">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.3">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.3">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="SpringAOP," />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.3" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="面向切面编程（AOP）在Spring框架中被作为核心组成部分之一，Spring将AOP发挥到很强大的功能。可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。">
-<meta name="keywords" content="SpringAOP">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Spring学习笔记（三）：面向切面的Spring">
-<meta property="og:url" content="http://yoursite.com/2017/07/23/Spring学习笔记（三）：面向切面的Spring/index.html">
-<meta property="og:site_name" content="菜鸟笔记">
-<meta property="og:description" content="面向切面编程（AOP）在Spring框架中被作为核心组成部分之一，Spring将AOP发挥到很强大的功能。可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-03T01:41:50.079Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring学习笔记（三）：面向切面的Spring">
-<meta name="twitter:description" content="面向切面编程（AOP）在Spring框架中被作为核心组成部分之一，Spring将AOP发挥到很强大的功能。可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。">
 
 
 
@@ -99,15 +76,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '5.1.4',
+    version: '6.0.3',
     sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -119,13 +94,48 @@
 </script>
 
 
+  
+
+
+
+
+  
+  <meta name="keywords" content="SpringAOP," />
+
+
+<meta name="description" content="面向切面编程（AOP）在Spring框架中被作为核心组成部分之一，Spring将AOP发挥到很强大的功能。可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。">
+<meta name="keywords" content="SpringAOP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring学习笔记（三）：面向切面的Spring">
+<meta property="og:url" content="http://yoursite.com/2017/07/23/Spring学习笔记（三）：面向切面的Spring/index.html">
+<meta property="og:site_name" content="菜鸟笔记">
+<meta property="og:description" content="面向切面编程（AOP）在Spring框架中被作为核心组成部分之一，Spring将AOP发挥到很强大的功能。可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2017/07/23/Spring学习笔记（三）：面向切面的Spring/pic_01.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/23/Spring学习笔记（三）：面向切面的Spring/pic_02.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/23/Spring学习笔记（三）：面向切面的Spring/pic_03.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/23/Spring学习笔记（三）：面向切面的Spring/pic_04.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/23/Spring学习笔记（三）：面向切面的Spring/pic_05.png">
+<meta property="og:updated_time" content="2018-02-05T01:36:28.260Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spring学习笔记（三）：面向切面的Spring">
+<meta name="twitter:description" content="面向切面编程（AOP）在Spring框架中被作为核心组成部分之一，Spring将AOP发挥到很强大的功能。可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。">
+<meta name="twitter:image" content="http://yoursite.com/2017/07/23/Spring学习笔记（三）：面向切面的Spring/pic_01.png">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/2017/07/23/Spring学习笔记（三）：面向切面的Spring/"/>
 
 
 
-
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
   <title>Spring学习笔记（三）：面向切面的Spring | 菜鸟笔记</title>
   
 
@@ -136,9 +146,37 @@
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -149,7 +187,7 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"> <div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
@@ -183,51 +221,25 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
         </li>
       
         
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
         </li>
       
 
@@ -237,10 +249,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
@@ -273,9 +282,15 @@
 </nav>
 
 
+  
+
+
 
  </div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
@@ -292,6 +307,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -300,7 +317,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/23/Spring学习笔记（三）：面向切面的Spring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
+      <meta itemprop="name" content="yaotfei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -326,11 +343,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-23T20:50:10+08:00">
-                2017-07-23
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-23T20:50:10+08:00">2017-07-23</time>
             
 
+            
             
 
             
@@ -348,11 +364,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Spring学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">Spring学习笔记</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Spring学习笔记/" itemprop="url" rel="index"><span itemprop="name">Spring学习笔记</span></a></span>
 
                 
                 
@@ -372,9 +384,7 @@
           
 
           
-              <div class="post-description">
-                  面向切面编程（AOP）在Spring框架中被作为核心组成部分之一，Spring将AOP发挥到很强大的功能。可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。
-              </div>
+              <div class="post-description">面向切面编程（AOP）在Spring框架中被作为核心组成部分之一，Spring将AOP发挥到很强大的功能。可以通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。</div>
           
 
         </div>
@@ -390,7 +400,7 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><hr>
 <p>一个成熟的软件系统包括许多功能，比如日志，安全和事务管理器等，这些功能需要用到应用程序的多个地方，但是我们又不想在每个点都明确调用它们。如果让应用对象只关注于自己所针对的业务，而其他的问题由其他的应用对象来处理，这会不会更好呢？<br>在软件开发中，散布于应用中多处的功能被称为横切关注点，这些横切关注点从概念上是与应用的业务逻辑相分离的。把这些横切关注点与业务逻辑相分离正是面向切面编程（AOP)所要解决的问题。</p>
 <h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><hr>
 <h2 id="什么是面向切面编程"><a href="#什么是面向切面编程" class="headerlink" title="什么是面向切面编程"></a>什么是面向切面编程</h2><p>在软件开发过程中，如果要重用通用功能的话，最常见的面向对象技术是继承或者委托。但是，如果在整个应用中都使用相同的基类，继承往往会导致一个脆弱的对象体系，而使用委托可能需要对委托对象进行复杂的调用。<br>切面提供了取代继承和委托的另一种可选方案，而且在很多场景下更清晰简洁。在使用面向切面编程时，我们仍然在一个地方定义通用功能，但是可以通过声明的方式定义这个功能要以何种方式在何处应用，而无需修改受影响的类。横切关注点可以被模块化为特殊的类，这些类被称为切面。这样做有两个好处：首先，现在每个关注点都集中于一个地方，而不是分散到多处代码中；其次，服务模块更简洁，因为它们只包含主要的关注点的代码，而次要关注点的代码被转移到切面中了。</p>
@@ -426,7 +436,7 @@
 <p>我们已经了解了一些基础的AOP术语，现在让我们再看看这些AOP的核心概念是如何在Spring中实现的。</p>
 <h3 id="Spring对AOP的支持"><a href="#Spring对AOP的支持" class="headerlink" title="Spring对AOP的支持"></a>Spring对AOP的支持</h3><p>并不是所有的AOP框架都是相同的，它们在连接点模型上可能有强弱之分。但是无论如何，创建切点来定义切面所织入的连接点是AOP框架的基本功能。<br>Spring AOP构建在动态代理基础之上，因此，Spring对AOP的支持局限于方法拦截。  </p>
 <h2 id="通过切点来选择连接点"><a href="#通过切点来选择连接点" class="headerlink" title="通过切点来选择连接点"></a>通过切点来选择连接点</h2><p>切点用于准确定位应该在什么地方应用切面的通知。通知和切点是切面的最基本元素。因此，了解如何编写切点非常重要。<br>在Spring AOP中，要使用AspectJ的切点表达式语言来定义切点。关于Spring AOP的AspectJ切点，最重要的一点就是Spring仅支持AspectJ切点指示器的一个子集。下表列出了Spring AOP所支持的AspectJ 切点表达式语言来定义Spring切面：</p>
-
+<img src="/2017/07/23/Spring学习笔记（三）：面向切面的Spring/pic_01.png" title="Spring借助AspectJ的切点表达式语言来定义Spring切面">
 <p>在Spring中尝试使用AspectJ其他指示器时，将会抛出IllegalArgument-Exception异常。<br>在上面所展示的这些Spring支持的指示器时，只有execution指示器时实际执行匹配的，其他的指示器都是用来限制匹配的。这说明execution指示器是我们在编写切点定义时最主要使用的指示器。在此基础上，我们使用其他指示器来限制所匹配的切点。  </p>
 <h3 id="编写切点"><a href="#编写切点" class="headerlink" title="编写切点"></a>编写切点</h3><p>为了阐述Spring中的切面，我们定义一个Performance接口：</p>
 <pre><code>package concert;
@@ -435,9 +445,9 @@ public interface Performance{
     public void perform();
 }
 </code></pre><p>Performance可以代表任何类型的现场表演。假设我们编写Performance的perform()方法触发的通知：</p>
-
+<img src="/2017/07/23/Spring学习笔记（三）：面向切面的Spring/pic_02.png" title="使用AspectJ切点表达式来选择Performance的perform()方法">
 <p>上图展现了一个切点表达式，这个表达式能够设置当perform()方法执行时触发通知的调用。<br>我们使用execution()指示器选择Performance的perform()方法。方法表达式以“*”号开始，表明了我们不关心方法返回值类型。然后，我们指定了全限定类名和方法名。对于方法参数列表，我们使用两个点号（..）表明切点要选择任意的perform()方法，无论该方法的入参是什么。<br>现在假设我们需要配置的切点仅匹配concert包，可以使用winthin()指示器来限制匹配：  </p>
-
+<img src="/2017/07/23/Spring学习笔记（三）：面向切面的Spring/pic_03.png" title="使用within()指示器限制切点范围">
 <p>我们使用了“&amp;&amp;”操作符把execution()和winthin()指示器连接在一起形成与（and）关系。类似地，我们可以使用“||”操作符来标识或（or）关系，而使用“!”操作符来标识非（not）操作。<br>因为“&amp;”在XML中有特殊含义，所以在Spring的XML配置里面描述切点时，我们可以使用and来代替“&amp;&amp;”。同样，or和not可以分别用来代替“||”和“!”。 </p>
 <h3 id="在切点中选择bean"><a href="#在切点中选择bean" class="headerlink" title="在切点中选择bean"></a>在切点中选择bean</h3><p>除了Spring支持的指示器外，Spring还引入了一个新的bean()指示器，它允许我们我们在切点表达式中使用bean的ID来标识bean。bean()使用bean ID或则bean名称作为参数来限制切点只匹配特定的bean：</p>
 <pre><code>execution（* concert。Performance.perform()) and bean(&apos;woodstock&apos;)
@@ -476,7 +486,7 @@ public class Audience{
     }
 }
 </code></pre><p>Audience类使用@AspectJ注解进行了标注。该注解表明Audience不仅仅是一个POJO，还是一个切面。Audience类中的方法都使用注解来定义切面的具体行为。<br>Audience有四个方法，定义了一个观众在观看演出时可能会做的事情。在演出之前，观众要就坐（takeSeats()）并将手机调至静音状态（silenceCellPhones()）。如果演出很精彩的话，观众应该会鼓掌喝彩（applause()）。不过，如果演出没有达到观众预期的话，观众会要求退款（demandRefund()）。<br>可以看到，这些方法都使用了通知注解来表明他们应该在什么时候调用。AspectJ提供了五个注解来定义通知：  </p>
-
+<img src="/2017/07/23/Spring学习笔记（三）：面向切面的Spring/pic_04.png" title="Spring使用AspectJ注解来声明通知方法">
 <p>Audience使用到了前五个注解中的三个。takeSeats()和silence CellPhones()方法都用到了@Before注解，表明它们应该在演出开始之前调用。applause()方法使用了@AfterReturning注解，它会在演出成功返回后调用。demandRefund()方法上添加了@AfterThrowing注解，这表明它会在抛出异常以后执行。<br>在上面的这些注解都给定了一个切点表达式作为它的值，同时这四个方法的切点表达式都是相同的。其实，它们可以设置成不同的切点表达式。<br>相同的切点表达式我们重复了四遍，如果我们只定义这个切点一次，然后每次需要的时候引用它，那么这会是一个很好的方案。<br>我们可以使用@Pointcut注解能够在一个@AspectJ切面内定义可重用的切点：</p>
 <pre><code>package concert
 
@@ -561,7 +571,7 @@ public class Audience{
 }
 </code></pre><p>@Around注解表明watchPerformance()方法会作为performance()切点的环绕通知。在这个通知中，观众在演出前会将手机调至静音并就坐，演出结束后会鼓掌喝彩，如果演出失败，观众会要求退款。<br>在这个新的通知方法中，ProceedingJoinPoint作为参数，这个对象必须有，因为你还要在通知中通过它来调用被通知的方法。通知方法中可以做任何的事情，当要将控制权交给被通知的方法时，它需要调用ProceedingJoinPoint的proceed()方法。如果不调用这个方法，你的通知实际上会阻塞对被通知的调用。</p>
 <h2 id="在XML中声明切面"><a href="#在XML中声明切面" class="headerlink" title="在XML中声明切面"></a>在XML中声明切面</h2><p>在Spring开发中中我们基于这样一种原则：基于注解的配置要优于基于java的配置，基于java的配置要优于基于XML的配置。但是，如果要声明切面，但是又不能为通知类添加注解时，就必须转向XML配置了。<br>在Spring的aop命名空间中，提供了许多元素用来在XML中声明切面：</p>
-
+<img src="/2017/07/23/Spring学习笔记（三）：面向切面的Spring/pic_05.png" title="Spring的AOP配置元素">
 <p>aop命名空间的元素能够让我们直接在Spring配置声明切面，而不需要注解。<br>我们重新看一下Audience类，我们将所有的AspectJ注解去掉</p>
 <pre><code>package concert
 
@@ -654,35 +664,6 @@ public class Audience{
     
 
     
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="rick 微信支付"/>
-        <p>微信支付</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="rick 支付宝"/>
-        <p>支付宝</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
-    
 
     
 
@@ -741,9 +722,6 @@ public class Audience{
           </div>
           
 
-
-          
-
   
     <div class="comments" id="comments">
       <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA2OC85NjMw"></div>
@@ -786,58 +764,83 @@ public class Audience{
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">rick</p>
+              <p class="site-author-name" itemprop="name">yaotfei</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">11</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:yaotfei@aliyun.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yaotfei@aliyun.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
             </div>
           
 
@@ -857,10 +860,17 @@ public class Audience{
                     <a href="http://theme-next.iissnan.com/" title="NexT" target="_blank">NexT</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhangxinxu.com/" title="鑫空间，鑫生活" target="_blank">鑫空间，鑫生活</a>
+                  </li>
+                
               </ul>
             </div>
           
 
+          
+            
+          
           
 
         </div>
@@ -876,7 +886,7 @@ public class Audience{
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是面向切面编程"><span class="nav-number">2.1.</span> <span class="nav-text">什么是面向切面编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AOP术语"><span class="nav-number">2.1.1.</span> <span class="nav-text">AOP术语　</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring对AOP的支持"><span class="nav-number">2.1.2.</span> <span class="nav-text">Spring对AOP的支持</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过切点来选择连接点"><span class="nav-number">2.2.</span> <span class="nav-text">通过切点来选择连接点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编写切点"><span class="nav-number">2.2.1.</span> <span class="nav-text">编写切点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在切点中选择bean"><span class="nav-number">2.2.2.</span> <span class="nav-text">在切点中选择bean</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用注解创建切面"><span class="nav-number">2.3.</span> <span class="nav-text">使用注解创建切面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义切面"><span class="nav-number">2.3.0.1.</span> <span class="nav-text">定义切面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建环绕通知"><span class="nav-number">2.3.0.2.</span> <span class="nav-text">创建环绕通知</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在XML中声明切面"><span class="nav-number">2.4.</span> <span class="nav-text">在XML中声明切面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#声明前置和后置通知"><span class="nav-number">2.4.1.</span> <span class="nav-text">声明前置和后置通知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明环绕通知"><span class="nav-number">2.4.2.</span> <span class="nav-text">声明环绕通知</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是面向切面编程"><span class="nav-number">2.1.</span> <span class="nav-text">什么是面向切面编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AOP术语"><span class="nav-number">2.1.1.</span> <span class="nav-text">AOP术语　</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring对AOP的支持"><span class="nav-number">2.1.2.</span> <span class="nav-text">Spring对AOP的支持</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过切点来选择连接点"><span class="nav-number">2.2.</span> <span class="nav-text">通过切点来选择连接点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编写切点"><span class="nav-number">2.2.1.</span> <span class="nav-text">编写切点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在切点中选择bean"><span class="nav-number">2.2.2.</span> <span class="nav-text">在切点中选择bean</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用注解创建切面"><span class="nav-number">2.3.</span> <span class="nav-text">使用注解创建切面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义切面"><span class="nav-number">2.3.0.1.</span> <span class="nav-text">定义切面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建环绕通知"><span class="nav-number">2.3.0.2.</span> <span class="nav-text">创建环绕通知</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在XML中声明切面"><span class="nav-number">2.4.</span> <span class="nav-text">在XML中声明切面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#声明前置和后置通知"><span class="nav-number">2.4.1.</span> <span class="nav-text">声明前置和后置通知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明环绕通知"><span class="nav-number">2.4.2.</span> <span class="nav-text">声明环绕通知</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -903,7 +913,11 @@ public class Audience{
   <span class="author" itemprop="copyrightHolder">Hosted by <a href="https://coding.net/pages" target="_Blank">Coding Pages</a></span>
 
   
+
+  
 </div>
+
+
 
 
 
@@ -917,15 +931,6 @@ public class Audience{
 
 
 
-
-  <script type="text/javascript">
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//tajs.qq.com/stats?sId=64957709";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -961,7 +966,11 @@ public class Audience{
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -981,16 +990,6 @@ public class Audience{
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -999,18 +998,13 @@ public class Audience{
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.3"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.3"></script>
 
 
 
@@ -1018,30 +1012,26 @@ public class Audience{
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.3"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.3"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.3"></script>
 
 
 
   
 
 
-  
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.3"></script>
 
+
+
+  
 
 
 
@@ -1069,8 +1059,6 @@ public class Audience{
       })(document, 'script');
     </script>
   
-
-
 
 
 
@@ -1132,6 +1120,21 @@ public class Audience{
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -1165,6 +1168,9 @@ public class Audience{
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1411,11 +1417,13 @@ public class Audience{
   
 
   
-  
 
   
   
 
+  
+
+  
 
   
 

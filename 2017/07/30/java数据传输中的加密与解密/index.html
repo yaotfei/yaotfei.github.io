@@ -5,12 +5,15 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +41,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,47 +49,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.0.3" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.3">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.3">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.3">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="加密解密," />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.3" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="作为开发者，编写安全的代码比编写优雅的代码更重要，因为安全是一切应用的根本，所以为了确保数据传输和数据存储的安全，我们可以通过特定的算法，将数据明文加密成复杂的密文。">
-<meta name="keywords" content="加密解密">
-<meta property="og:type" content="article">
-<meta property="og:title" content="java数据传输中的加密与解密">
-<meta property="og:url" content="http://yoursite.com/2017/07/30/java数据传输中的加密与解密/index.html">
-<meta property="og:site_name" content="菜鸟笔记">
-<meta property="og:description" content="作为开发者，编写安全的代码比编写优雅的代码更重要，因为安全是一切应用的根本，所以为了确保数据传输和数据存储的安全，我们可以通过特定的算法，将数据明文加密成复杂的密文。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-03T01:41:50.088Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java数据传输中的加密与解密">
-<meta name="twitter:description" content="作为开发者，编写安全的代码比编写优雅的代码更重要，因为安全是一切应用的根本，所以为了确保数据传输和数据存储的安全，我们可以通过特定的算法，将数据明文加密成复杂的密文。">
 
 
 
@@ -99,15 +76,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '5.1.4',
+    version: '6.0.3',
     sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -119,13 +94,44 @@
 </script>
 
 
+  
+
+
+
+
+  
+  <meta name="keywords" content="加密解密," />
+
+
+<meta name="description" content="作为开发者，编写安全的代码比编写优雅的代码更重要，因为安全是一切应用的根本，所以为了确保数据传输和数据存储的安全，我们可以通过特定的算法，将数据明文加密成复杂的密文。">
+<meta name="keywords" content="加密解密">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java数据传输中的加密与解密">
+<meta property="og:url" content="http://yoursite.com/2017/07/30/java数据传输中的加密与解密/index.html">
+<meta property="og:site_name" content="菜鸟笔记">
+<meta property="og:description" content="作为开发者，编写安全的代码比编写优雅的代码更重要，因为安全是一切应用的根本，所以为了确保数据传输和数据存储的安全，我们可以通过特定的算法，将数据明文加密成复杂的密文。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2017/07/30/java数据传输中的加密与解密/pic_01.png">
+<meta property="og:updated_time" content="2018-02-05T01:36:28.269Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java数据传输中的加密与解密">
+<meta name="twitter:description" content="作为开发者，编写安全的代码比编写优雅的代码更重要，因为安全是一切应用的根本，所以为了确保数据传输和数据存储的安全，我们可以通过特定的算法，将数据明文加密成复杂的密文。">
+<meta name="twitter:image" content="http://yoursite.com/2017/07/30/java数据传输中的加密与解密/pic_01.png">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/2017/07/30/java数据传输中的加密与解密/"/>
 
 
 
-
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
   <title>java数据传输中的加密与解密 | 菜鸟笔记</title>
   
 
@@ -136,9 +142,37 @@
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -149,7 +183,7 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"> <div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
@@ -183,51 +217,25 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
         </li>
       
         
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
         </li>
       
 
@@ -237,10 +245,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
@@ -273,9 +278,15 @@
 </nav>
 
 
+  
+
+
 
  </div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
@@ -292,6 +303,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -300,7 +313,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/30/java数据传输中的加密与解密/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
+      <meta itemprop="name" content="yaotfei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -326,11 +339,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T13:14:57+08:00">
-                2017-07-30
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T13:14:57+08:00">2017-07-30</time>
             
 
+            
             
 
             
@@ -348,11 +360,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">Java学习笔记</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java学习笔记/" itemprop="url" rel="index"><span itemprop="name">Java学习笔记</span></a></span>
 
                 
                 
@@ -372,9 +380,7 @@
           
 
           
-              <div class="post-description">
-                  作为开发者，编写安全的代码比编写优雅的代码更重要，因为安全是一切应用的根本，所以为了确保数据传输和数据存储的安全，我们可以通过特定的算法，将数据明文加密成复杂的密文。
-              </div>
+              <div class="post-description">作为开发者，编写安全的代码比编写优雅的代码更重要，因为安全是一切应用的根本，所以为了确保数据传输和数据存储的安全，我们可以通过特定的算法，将数据明文加密成复杂的密文。</div>
           
 
         </div>
@@ -390,7 +396,7 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><hr>
 <p>在最近的工作中，用户需求要求在两个独立的系统通信中，要确保对外的接口不能被其他系统非法访问，这就涉及到了数据通信中对信息的加密和Token的验证，所以对这方面的知识做了一些了解。</p>
 <h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><hr>
 <h2 id="浅谈加密"><a href="#浅谈加密" class="headerlink" title="浅谈加密"></a>浅谈加密</h2><h3 id="相关术语"><a href="#相关术语" class="headerlink" title="相关术语"></a>相关术语</h3><p>加密是以某种特殊的算法改变原有的信息数据，使得未授权的用户即使获得了已加密的信息，但不知道解密的方法，仍无法了解信息的内容。<br>在加密系统中出现了一些重要的概念术语：</p>
@@ -408,7 +414,7 @@
 <p>tip：加密算法和解密算法的操作通常是在一组密钥（ key ）的控制下进行的，分别称为加密密钥(encryption  key) 和解密密钥(decryption  key) 。  在加密系统中，加密算法和密钥是最重要的两个概念。在这里需要对加密算法和密钥进行一个解释。以最简单的“恺撒加密法”为例。 《高卢战记》有描述恺撒曾经使用密码来传递信息，即所谓的“ 恺撒密码” 。它是一种替代密码，通过将字母按顺序推后 3 位起到加密作用，如将字母 A 换作字母D，将字母 B换作字母E。如“China”可以变为“Fklqd”；解密过程相反。 在这个简单的加密方法中，“向右移位”，可以理解为加密算法；“3 ”可以理解为加密密钥。对于解密过程，“向左移位”，可以理解为解密算法；“3 ”可以理解为解密密钥。显然，密钥是一种参数，它是在明文转换为密文或将密文转换为明文的算法中输入的数据。 恺撒加密法的安全性来源于两个方面：第一，对加密算法的隐藏；第二，对密钥的隐蔽。单单隐蔽加密算法以保护信息，在学界和业界已有相当讨论，一般认为是不够安全的。公开的加密算法是给黑客长年累月攻击测试，对比隐蔽的加密算法要安全多。一般说来，加密之所以安全，是因为其加密的密钥的隐藏，并非加密解密算法的保密。而流行的一些加密解密算法一般是完全公开的。敌方如果取得已加密的数据，即使得知加密算法，若没有密钥，也不能进行解密。 </p>
 </blockquote>
 <h3 id="常见的加密算法"><a href="#常见的加密算法" class="headerlink" title="常见的加密算法"></a>常见的加密算法</h3><p>加密技术从本质上说是对信息进行编码和解码的技术。加密是将可读信息（明文）变为代码形式（密文），解密是加密的逆过程，相当于将密文变为明文。<br>众多的加密手段大致可以分为<strong>单向加密</strong>和<strong>双向加密</strong>。<br>单向加密指通过对数据进行摘要计算生成密文，密文不可逆推还原，比如有Base64、MD5、SHA等。双向加密则相反，指可以把密文逆推还原成明文。<br>双向加密又分为<strong>对称加密</strong>和<strong>非对称加密</strong>。<br>对称加密是指数据使用者必须拥有同样的密钥才可以进行加密解密，就像大家共同约定了以组暗号一样，对称加密的手段有DES、3DES、AES、IDEA、RC4、RC5等。而非对称加密相对于对称加密而言，无需拥有同一组密钥，它是一种信息公开的密钥交换协议。非对称加密需要公开密钥和私有密钥两组密钥，公开密钥和私有密钥是配对起来的，也就是说使用公开密钥进行数据加密，只有对应的私有密钥才能进行解密。此类加密手段有RSA、DSA等。</p>
-
+<img src="/2017/07/30/java数据传输中的加密与解密/pic_01.png" title="常见的加密算法">
 <h2 id="单向加密"><a href="#单向加密" class="headerlink" title="单向加密"></a>单向加密</h2><p>单向加密在加密过程中不需要使用密钥，输入明文后由系统直接经过加密算法处理成密文，密文无法解密。只有重新输入明文，并经过同样的加密算法处理，得到相同的密文并被系统重新识别后，才能真正解密。该方法计算复杂，通常只在数据量有限的情形下使用。<br>常见的单向加密方式有：</p>
 <ul>
 <li>BASE64 （严格地说，属于编码格式，而非加密算法）</li>
@@ -1127,35 +1133,6 @@ true
     
 
     
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="rick 微信支付"/>
-        <p>微信支付</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="rick 支付宝"/>
-        <p>支付宝</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
-    
 
     
 
@@ -1214,9 +1191,6 @@ true
           </div>
           
 
-
-          
-
   
     <div class="comments" id="comments">
       <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzA2OC85NjMw"></div>
@@ -1259,58 +1233,83 @@ true
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">rick</p>
+              <p class="site-author-name" itemprop="name">yaotfei</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">11</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:yaotfei@aliyun.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yaotfei@aliyun.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
             </div>
           
 
@@ -1330,10 +1329,17 @@ true
                     <a href="http://theme-next.iissnan.com/" title="NexT" target="_blank">NexT</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhangxinxu.com/" title="鑫空间，鑫生活" target="_blank">鑫空间，鑫生活</a>
+                  </li>
+                
               </ul>
             </div>
           
 
+          
+            
+          
           
 
         </div>
@@ -1349,7 +1355,7 @@ true
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#浅谈加密"><span class="nav-number">2.1.</span> <span class="nav-text">浅谈加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相关术语"><span class="nav-number">2.1.1.</span> <span class="nav-text">相关术语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的加密算法"><span class="nav-number">2.1.2.</span> <span class="nav-text">常见的加密算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单向加密"><span class="nav-number">2.2.</span> <span class="nav-text">单向加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BASE64"><span class="nav-number">2.2.1.</span> <span class="nav-text">BASE64</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MD5"><span class="nav-number">2.2.2.</span> <span class="nav-text">MD5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SHA"><span class="nav-number">2.2.3.</span> <span class="nav-text">SHA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HMAC"><span class="nav-number">2.2.4.</span> <span class="nav-text">HMAC</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双向加密"><span class="nav-number">2.3.</span> <span class="nav-text">双向加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密"><span class="nav-number">2.3.1.</span> <span class="nav-text">对称加密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DES"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">DES</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3DES"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">3DES</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AES"><span class="nav-number">2.3.1.3.</span> <span class="nav-text">AES</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非对称加密"><span class="nav-number">2.3.2.</span> <span class="nav-text">非对称加密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RSA"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">RSA</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#浅谈加密"><span class="nav-number">2.1.</span> <span class="nav-text">浅谈加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相关术语"><span class="nav-number">2.1.1.</span> <span class="nav-text">相关术语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的加密算法"><span class="nav-number">2.1.2.</span> <span class="nav-text">常见的加密算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单向加密"><span class="nav-number">2.2.</span> <span class="nav-text">单向加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BASE64"><span class="nav-number">2.2.1.</span> <span class="nav-text">BASE64</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MD5"><span class="nav-number">2.2.2.</span> <span class="nav-text">MD5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SHA"><span class="nav-number">2.2.3.</span> <span class="nav-text">SHA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HMAC"><span class="nav-number">2.2.4.</span> <span class="nav-text">HMAC</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双向加密"><span class="nav-number">2.3.</span> <span class="nav-text">双向加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密"><span class="nav-number">2.3.1.</span> <span class="nav-text">对称加密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DES"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">DES</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3DES"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">3DES</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AES"><span class="nav-number">2.3.1.3.</span> <span class="nav-text">AES</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非对称加密"><span class="nav-number">2.3.2.</span> <span class="nav-text">非对称加密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RSA"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">RSA</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -1376,7 +1382,11 @@ true
   <span class="author" itemprop="copyrightHolder">Hosted by <a href="https://coding.net/pages" target="_Blank">Coding Pages</a></span>
 
   
+
+  
 </div>
+
+
 
 
 
@@ -1390,15 +1400,6 @@ true
 
 
 
-
-  <script type="text/javascript">
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//tajs.qq.com/stats?sId=64957709";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -1434,7 +1435,11 @@ true
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1454,16 +1459,6 @@ true
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1472,18 +1467,13 @@ true
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.3"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.3"></script>
 
 
 
@@ -1491,30 +1481,26 @@ true
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.3"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.3"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.3"></script>
 
 
 
   
 
 
-  
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.3"></script>
 
+
+
+  
 
 
 
@@ -1542,8 +1528,6 @@ true
       })(document, 'script');
     </script>
   
-
-
 
 
 
@@ -1605,6 +1589,21 @@ true
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -1638,6 +1637,9 @@ true
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1884,11 +1886,13 @@ true
   
 
   
-  
 
   
   
 
+  
+
+  
 
   
 

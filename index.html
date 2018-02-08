@@ -5,12 +5,15 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +41,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,42 +49,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.0.3" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.3">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.3">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.3">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.3" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="菜鸟笔记">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="菜鸟笔记">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="菜鸟笔记">
 
 
 
@@ -94,15 +76,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '5.1.4',
+    version: '6.0.3',
     sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -114,13 +94,37 @@
 </script>
 
 
+  
+
+
+
+
+  
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="菜鸟笔记">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="菜鸟笔记">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="菜鸟笔记">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/"/>
 
 
 
-
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
   <title>菜鸟笔记</title>
   
 
@@ -131,9 +135,37 @@
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -145,7 +177,7 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"> <div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
@@ -179,51 +211,25 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
         </li>
       
         
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
         </li>
       
 
@@ -233,10 +239,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
@@ -269,9 +272,15 @@
 </nav>
 
 
+  
+
+
 
  </div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
@@ -288,6 +297,151 @@
   
   
 
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/04/java八种排序算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yaotfei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="菜鸟笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/04/java八种排序算法/" itemprop="url">java八种排序算法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-04T12:17:38+08:00">2018-02-04</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java学习笔记/" itemprop="url" rel="index"><span itemprop="name">Java学习笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          java的排序在面试种经常会问到这个问题，但是在工作中也一直没有用到，所以一直是一知半解，所以趁空闲时间整理一下。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/02/04/java八种排序算法/">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -296,7 +450,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/12/BASE64编码在图片上传中的应用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
+      <meta itemprop="name" content="yaotfei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -324,16 +478,33 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T16:07:13+08:00">
-                2017-08-12
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T16:07:13+08:00">2017-08-12</time>
             
 
+            
             
 
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java学习笔记/" itemprop="url" rel="index"><span itemprop="name">Java学习笔记</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -412,6 +583,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -420,7 +593,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/30/java数据传输中的加密与解密/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
+      <meta itemprop="name" content="yaotfei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -448,11 +621,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T13:14:57+08:00">
-                2017-07-30
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T13:14:57+08:00">2017-07-30</time>
             
 
+            
             
 
             
@@ -470,11 +642,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">Java学习笔记</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java学习笔记/" itemprop="url" rel="index"><span itemprop="name">Java学习笔记</span></a></span>
 
                 
                 
@@ -558,6 +726,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -566,7 +736,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/23/Spring学习笔记（三）：面向切面的Spring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
+      <meta itemprop="name" content="yaotfei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -594,11 +764,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-23T20:50:10+08:00">
-                2017-07-23
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-23T20:50:10+08:00">2017-07-23</time>
             
 
+            
             
 
             
@@ -616,11 +785,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Spring学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">Spring学习笔记</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Spring学习笔记/" itemprop="url" rel="index"><span itemprop="name">Spring学习笔记</span></a></span>
 
                 
                 
@@ -704,6 +869,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -712,7 +879,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/17/Spring学习笔记（二）：装配Bean/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
+      <meta itemprop="name" content="yaotfei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -740,11 +907,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-17T11:32:26+08:00">
-                2017-07-17
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-17T11:32:26+08:00">2017-07-17</time>
             
 
+            
             
 
             
@@ -762,11 +928,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Spring学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">Spring学习笔记</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Spring学习笔记/" itemprop="url" rel="index"><span itemprop="name">Spring学习笔记</span></a></span>
 
                 
                 
@@ -850,6 +1012,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -858,7 +1022,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/16/Spring学习笔记（一）：Spring初识/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
+      <meta itemprop="name" content="yaotfei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -886,11 +1050,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-16T13:30:05+08:00">
-                2017-07-16
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-16T13:30:05+08:00">2017-07-16</time>
             
 
+            
             
 
             
@@ -908,11 +1071,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Spring学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">Spring学习笔记</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Spring学习笔记/" itemprop="url" rel="index"><span itemprop="name">Spring学习笔记</span></a></span>
 
                 
                 
@@ -996,6 +1155,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1004,7 +1165,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/09/Hello-Hexo（六）：为博客添加站内搜索/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
+      <meta itemprop="name" content="yaotfei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -1032,11 +1193,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-09T17:57:57+08:00">
-                2017-07-09
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-09T17:57:57+08:00">2017-07-09</time>
             
 
+            
             
 
             
@@ -1054,11 +1214,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo教程/" itemprop="url" rel="index"><span itemprop="name">Hexo教程</span></a></span>
 
                 
                 
@@ -1142,6 +1298,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1150,7 +1308,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/08/Hello-Hexo（五）：博客部署到coding上/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
+      <meta itemprop="name" content="yaotfei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -1178,11 +1336,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-08T09:36:28+08:00">
-                2017-07-08
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-08T09:36:28+08:00">2017-07-08</time>
             
 
+            
             
 
             
@@ -1200,11 +1357,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo教程/" itemprop="url" rel="index"><span itemprop="name">Hexo教程</span></a></span>
 
                 
                 
@@ -1288,6 +1441,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1296,7 +1451,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/07/Hello-Hexo（四）：部署源代码到github/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
+      <meta itemprop="name" content="yaotfei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -1324,11 +1479,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-07T15:54:01+08:00">
-                2017-07-07
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-07T15:54:01+08:00">2017-07-07</time>
             
 
+            
             
 
             
@@ -1346,11 +1500,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo教程/" itemprop="url" rel="index"><span itemprop="name">Hexo教程</span></a></span>
 
                 
                 
@@ -1434,6 +1584,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1442,7 +1594,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/07/Hello-Hexo（三）：发表文章/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
+      <meta itemprop="name" content="yaotfei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -1470,11 +1622,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-07T11:27:41+08:00">
-                2017-07-07
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-07T11:27:41+08:00">2017-07-07</time>
             
 
+            
             
 
             
@@ -1492,11 +1643,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo教程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo教程/" itemprop="url" rel="index"><span itemprop="name">Hexo教程</span></a></span>
 
                 
                 
@@ -1572,152 +1719,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/07/Hello-Hexo（二）：更换主题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="rick">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="菜鸟笔记">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/07/Hello-Hexo（二）：更换主题/" itemprop="url">Hello Hexo（二）：hexo主题及网站基本配置</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-07T09:24:04+08:00">
-                2017-07-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo教程</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          上一篇介绍如何用github+hexo搭建自己的播客，hexo默认的主题是landsacpe，如果不喜欢也可以从github上面选择自己喜欢的主题。本篇介绍一下我自己用的主题配置
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/07/Hello-Hexo（二）：更换主题/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1728,9 +1729,6 @@
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1757,58 +1755,83 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">rick</p>
+              <p class="site-author-name" itemprop="name">yaotfei</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">11</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:yaotfei@aliyun.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yaotfei@aliyun.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
             </div>
           
 
@@ -1828,10 +1851,17 @@
                     <a href="http://theme-next.iissnan.com/" title="NexT" target="_blank">NexT</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhangxinxu.com/" title="鑫空间，鑫生活" target="_blank">鑫空间，鑫生活</a>
+                  </li>
+                
               </ul>
             </div>
           
 
+          
+            
+          
           
 
         </div>
@@ -1858,7 +1888,11 @@
   <span class="author" itemprop="copyrightHolder">Hosted by <a href="https://coding.net/pages" target="_Blank">Coding Pages</a></span>
 
   
+
+  
 </div>
+
+
 
 
 
@@ -1872,15 +1906,6 @@
 
 
 
-
-  <script type="text/javascript">
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//tajs.qq.com/stats?sId=64957709";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -1916,7 +1941,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1936,16 +1965,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1954,18 +1973,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.3"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.3"></script>
 
 
 
@@ -1973,9 +1987,9 @@
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.3"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.3"></script>
 
 
 
@@ -1984,15 +1998,11 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.3"></script>
 
 
 
   
-
-
-  
-
 
 
 
@@ -2009,8 +2019,6 @@
 
 
   
-
-
 
 
 
@@ -2072,6 +2080,21 @@
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -2105,6 +2128,9 @@
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -2351,31 +2377,13 @@
   
 
   
-  
 
   
   
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
+  
 
   
 
